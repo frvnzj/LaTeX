@@ -1,0 +1,58 @@
+\documentclass[doc,letterpaper,12pt]{apa7}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,spanish]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[style=apa,backend=biber]{biblatex}
+\usepackage{csquotes}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{~/bib/refs.bib}
+
+\usepackage[T1]{fontenc}
+\usepackage{baskervillef}
+\usepackage[varqu,varl,var0]{inconsolata}
+\usepackage[scale=.95,type1]{cabin}
+\usepackage[baskerville,vvarbb]{newtxmath}
+\usepackage[cal=boondoxo]{mathalfa}
+
+\usepackage{yfonts}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead{}
+\fancyhead[C]{\emph{título}}
+\fancyhead[LO,RE]{nombre/other}
+\fancyhead[LE,RO]{\thepage}
+
+%--------------------------------------------------------
+
+\begin{document}
+
+\title{\Huge{Título}}
+
+\author{Nombre del Autor}
+\affiliation{}
+
+\maketitle
+
+\section{Introducción}
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+Este es un ejemplo de cómo usar las citas
+\parencite{Sartlp}, si quieres añadir páginas este
+es el comando \parencite[50-60]{parmh}. Y este es
+un ejemplo de notas al pie de
+página\footnote{Lorem ipsum dolor sit amet, qui
+minim labore adipisicing minim sint cillum sint
+consectetur cupidatat.}.
+
+% ---------------Bibliografía
+
+\nocite{*} % Comando que “imprime” la bibliografía no referenciada
+\printbibliography % Comando que “imprime la bibliogrfía referenciada
+
+
+\end{document}
