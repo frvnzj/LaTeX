@@ -1,58 +1,88 @@
-\documentclass[doc,letterpaper,12pt]{apa7}
+\documentclass[doc,12pt]{apa7}
+
+% xelatex
 
 \usepackage[utf8]{inputenc}
 \usepackage[greek,spanish]{babel}
-\usepackage{hyperref}
-\usepackage{graphicx}
+\usepackage[spanish=mexican]{csquotes}
 \usepackage[style=apa,backend=biber]{biblatex}
-\usepackage{csquotes}
 \DeclareLanguageMapping{spanish}{spanish-apa}
-\addbibresource{~/bib/refs.bib}
+\addbibresource{refs.bib} % Path/Ubicación del archivo de referencias
 
+% Fuente de LaTeX. Marcar como comentarios o borrar los
+% siguientes dos comandos si no se quiere esta fuente
+% proporcionada por LaTeX.
+\usepackage{kmath,kerkis}
 \usepackage[T1]{fontenc}
-\usepackage{baskervillef}
-\usepackage[varqu,varl,var0]{inconsolata}
-\usepackage[scale=.95,type1]{cabin}
-\usepackage[baskerville,vvarbb]{newtxmath}
-\usepackage[cal=boondoxo]{mathalfa}
 
-\usepackage{yfonts}
+% Si se prefiere usar una fuente ajena a LaTeX, ubicada en el
+% sistema, desmarque como comentarios los siguientes dos comandos. Para compilar el paquete «fontspec» se requiere del binario xelatex.
+% \usepackage{fontspec}
+% \setmainfont{Romana} % Entre corchetes va el nombre de la fuente a usar.
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancyhead{}
-\fancyhead[C]{\emph{título}}
-\fancyhead[LO,RE]{nombre/other}
-\fancyhead[LE,RO]{\thepage}
+% Comandos que modifican los márgenes del encabezado de página
+\setlength{\headheight}{15.93004pt}
+\addtolength{\topmargin}{-0.73004pt}
 
-%--------------------------------------------------------
+\usepackage{xurl} % Ajusta los links al margen de la página
+
+\usepackage[figurename=Imágen]{caption} % Cambia el nombre de las imágenes usadas.
+
+
+%------------- Inicio del documento -------------
 
 \begin{document}
 
-\title{\Huge{Título}}
 
-\author{Nombre del Autor}
-\affiliation{}
+% ------------ Portada ----------------
 
-\maketitle
+\title{Título}
+\shorttitle{Título corto} % Opcional
 
+\authorsnames{Nombre del autor}
+\authorsaffiliations{{Colegio, organización, academia a la
+			que se pertenece}} % Opcional
+
+\abstract{Resumen... Lorem ipsum dolor sit amet, qui minim
+	labore adipisicing minim sint cillum sint consectetur
+	cupidatat.} % Opcional
+
+\keywords{Etiquetas, sobre, temas, involucrado, o
+	relacionados, con el, ensayo, ejemplo, Ciencia, Tecnología} % opcional
+
+% \duedate{\today} % Opcional
+
+\authornote{Sitio web: \url{https://xjavierx.netlify.app/}} % opcional
+
+\maketitle % Genera los datos de portada.
+
+
+% ----------- Inicio de escrito --------------
 \section{Introducción}
 
 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 
 Este es un ejemplo de cómo usar las citas
-\parencite{Sartlp}, si quieres añadir páginas este
-es el comando \parencite[50-60]{parmh}. Y este es
-un ejemplo de notas al pie de
-página\footnote{Lorem ipsum dolor sit amet, qui
-minim labore adipisicing minim sint cillum sint
-consectetur cupidatat.}.
+\parencite{Sartlp}, si quieres añadir las páginas de la
+referencia este es el comando \parencite[50-60]{parmh}. Y
+este es un ejemplo de notas al pie de página\footnote{Lorem
+	ipsum dolor sit amet, qui minim labore adipisicing minim
+	sint cillum sint consectetur cupidatat.}.
 
-% ---------------Bibliografía
 
-\nocite{*} % Comando que “imprime” la bibliografía no referenciada
+\section{Desarrollo}
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+
+\section{Conclusión}
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+
+
+% ------------- Bibliografía -------------
+
 \printbibliography % Comando que “imprime la bibliogrfía referenciada
 
 
+% ------------- Fin del ensayo -----------
 \end{document}
