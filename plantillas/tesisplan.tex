@@ -1,0 +1,141 @@
+% ----------- Configuración LaTeX -----------
+
+\documentclass[12pt,twoside,left5mm,doublespacing]{bookest}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,spanish]{babel}
+\usepackage[spanish=mexican]{csquotes}
+
+\usepackage{graphicx} % Insertar imágenes
+
+\usepackage{romande} % Fuente
+\usepackage[T1]{fontenc}
+
+\usepackage[
+	backend=biber,
+	style=apa,
+]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{refs.bib} % Archivo de bibliografía: Path/Ubicación
+
+\usepackage{xurl}
+
+\newcommand{\logouacm}{logof.png} % Path/Ubicación de la imágen
+
+
+% ------------- Inicio de tesis -----------------
+
+\begin{document}
+
+
+% ------------- Portada -------------------
+
+\begin{titlepage}
+	\centering
+
+	\includegraphics[width=0.3\textwidth]{\logouacm}
+	\par\vspace{0.5cm}
+	\large{COLEGIO...} \\
+	\large{CARRERA...}
+	\par\vspace{0.5cm}
+	\Large\textbf{TÍTULO DE TESIS.} \\
+	\par\vspace{0.5cm}
+	\large{Trabajo recepcional - Tesis} \\
+	\Large{NOMBRE} \\
+	\large{MATRÍCULA}
+	\par\vspace{0.5cm}
+	\large{GRADO QUE SE OPTA} \\
+	\par\vspace{0.5cm}
+	\large{NOMBRE DIRECTOR DE TESIS}
+	\par\vspace{0.5cm}
+	\large{Ciudad de México, México} \\
+	\large{\today}
+
+\end{titlepage}
+
+
+% ------------ Índice ------------
+
+\thispagestyle{empty} % Hoja en blanco
+
+\tableofcontents % Índice
+
+\clearpage % Hoja en blanco -> siguiente hoja
+\thispagestyle{empty} % Hoja en blanco
+
+
+% ------------ Introducción ----------
+
+\frontmatter
+\chapter{Introducción}
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+
+
+% ------------- Capítulo 1 ----------------
+
+\mainmatter
+\part{Parte 1}
+
+\chapter{Nombre del capítulo 1}
+
+\section{Sección 1}
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+
+
+\section{Sección 2}
+Este es un ejemplo de cómo usar las citas
+\parencite{Sartlp}, si quieres añadir el número de página de
+la cia este es el comando \parencite[50-60]{parmh}. Y este
+es un ejemplo de notas al pie de página\footnote{Lorem ipsum
+	dolor sit amet, qui minim labore adipisicing minim sint
+	cillum sint consectetur cupidatat.}.
+
+
+\section{Sección 3}
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+
+% ------------- Capítulo 2 ----------------
+
+\part{Parte 2}
+
+\chapter{Nombre del capítulo 2}
+
+\section{Sección 1}
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+
+
+\section{Sección 2}
+Este es un ejemplo de cómo usar las citas
+\parencite{Sartlp}, si quieres añadir el número de página de
+la cia este es el comando \parencite[50-60]{parmh}. Y este
+es un ejemplo de notas al pie de página\footnote{Lorem ipsum
+	dolor sit amet, qui minim labore adipisicing minim sint
+	cillum sint consectetur cupidatat.}.
+
+
+\section{Sección 3}
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+
+% --------------- Bibliografía ----------------
+
+\backmatter
+\addcontentsline{toc}{chapter}{Bibliografía}
+
+
+% Usar sólo uno de los dos siguientes:
+
+% \nocite{*} % Comando que “imprime” la bibliografía no referenciada
+
+\printbibliography % Comando que “imprime” la bibliogrfía referenciada
+
+
+% -------------- Fin de la tesis ---------------
+
+\end{document}
