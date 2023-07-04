@@ -2,7 +2,7 @@
 ## Plantillas configuradas en formato APA
 
 ### Para tesis o libro
-![Screenshot](./assets/20230205111849_1.png)
+![Screenshot](./assets/1688428404.png)
 
 ### Para artículos o ensayos
-![Screenshot2](./assets/20230205113405_1.png)
+![Screenshot2](./assets/1688427966.png)
